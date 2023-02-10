@@ -1,0 +1,33 @@
+body {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    margin: 10px;
+    box-shadow: 5px 5px 10px;
+}
+
+.card-title {
+    text-align: center;
+    padding: 5px;
+    border-bottom: 5px double grey;
+}
+
+.card-subtitle {
+    font-weight: 700;
+    color: blueviolet;
+}
+
+.header {
+    color: aqua;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    padding: 75px;
+}

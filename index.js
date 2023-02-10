@@ -3,6 +3,8 @@ const inquirer = require('inquirer')
 const Manager = require("./lib/manager")
 const Intern = require("./lib/intern")
 const Engineer = require("./lib/engineer")
+const Employee = require("./lib/employee")
+const generateHtml = require('./src/generateHtml')
 
 
 
@@ -51,7 +53,7 @@ const questionRole = () => {
             message: 'Select a role for the employee:'
         },
     ]).then((response) => {
-        console.log(response.role)
+
         if (response.role === 'Engineer' ) {
             createEngineer()
         } else {
@@ -134,13 +136,14 @@ const confirmAddition = () => {
             message: 'Would you like to add an additional employee?'
         }
     ]).then((response) => {
-        console.log(response.confirm)
+        
         if (response.confirm) {
             questionRole()
         } else {
             // write file
-            console.log(team)
-            console.log(team.Manager)
+            generateHtml(team)
+            console.log('Your file has been generated!')
+            
         }
     })
 }
